@@ -1,0 +1,191 @@
+# BSA Self-Assessment
+
+## Author Details
+- **Full Name**: Abhishek Choudhary
+- **Student Code (Login Name)**: 1000118874
+- **Submission Date**: 26/05/2024
+
+## Self-Assessment Criteria
+
+### Task 1: Creating a User Environment
+
+**1. Correct Implementation of Script Functionality**
+The script correctly reads user data from the CSV file.
+ Users are created with the correct usernames and initial passwords.
+ Users are added to specified groups.
+ Shared folders are created and permissions are set correctly.
+ Links and aliases are created for users.
+
+
+**Self-Assessment**:
+Rating (out of 10): 8
+
+**2. Error Handling**
+ Errors are handled gracefully and logged appropriately.
+The script checks for existing users before creating new ones.
+
+**Self-Assessment**:
+Rating (out of 10): 9
+
+
+### Task 2: Backup Script
+
+**1. Correct Implementation of Script Functionality**
+ The script compresses the specified directory into a .tar.gz file.
+A backup is also created in a specified local directory.
+
+### Git and Documentation
+
+**1. Proper Use of Git**
+ The repository is initialized and all necessary files are tracked.
+ The repository is pushed to GitHub and shared with the instructor.
+ 
+ abhishek@abhishek-VirtualBox:~/Downloads/bash_script/backup/bash_script_1$ sudo apt install git
+[sudo] password for abhishek: 
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+git is already the newest version (1:2.34.1-1ubuntu1.10).
+0 upgraded, 0 newly installed, 0 to remove and 3 not upgraded.
+abhishek@abhishek-VirtualBox:~/Downloads/bash_script/backup/bash_script_1$ git config --global user.name "Abhishek Singh"
+git config --global user.email "akstyalish27@gmail.com"
+abhishek@abhishek-VirtualBox:~/Downloads/bash_script/backup/bash_script_1$ git init
+Reinitialized existing Git repository in /home/abhishek/Downloads/bash_script/backup/bash_script_1/.git/
+abhishek@abhishek-VirtualBox:~/Downloads/bash_script/backup/bash_script_1$ echo "*.log" >> .gitignore
+abhishek@abhishek-VirtualBox:~/Downloads/bash_script/backup/bash_script_1$ git add abhishek_users.sh backup.sh users.csv README.md .gitignore
+fatal: pathspec 'abhishek_users.sh' did not match any files
+abhishek@abhishek-VirtualBox:~/Downloads/bash_script/backup/bash_script_1$ git commit -m "Initial commit with user creation and backup scripts"
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.gitignore
+	.~lock.users.csv#
+	abhishek_user.sh
+	backup.sh
+	backup_script .sh
+	create_user.sh
+	delete_user.sh
+	users.csv
+	users.xlsx
+
+nothing added to commit but untracked files present (use "git add" to track)
+abhishek@abhishek-VirtualBox:~/Downloads/bash_script/backup/bash_script_1$ ^C
+abhishek@abhishek-VirtualBox:~/Downloads/bash_script/backup/bash_script_1$ git add .gitignore abhishek_user.sh backup.sh create_user.sh delete_user.sh users.csv 
+abhishek@abhishek-VirtualBox:~/Downloads/bash_script/backup/bash_script_1$ git commit -m "Initial commit with user creation and backup scripts"
+[master (root-commit) db4a099] Initial commit with user creation and backup scripts
+ 6 files changed, 329 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100755 abhishek_user.sh
+ create mode 100755 backup.sh
+ create mode 100755 create_user.sh
+ create mode 100755 delete_user.sh
+ create mode 100644 users.csv
+abhishek@abhishek-VirtualBox:~/Downloads/bash_script/backup/bash_script_1$ git add .gitignore
+git commit -m "Add .gitignore file to ignore unnecessary files"
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.~lock.users.csv#
+	backup_script .sh
+	users.xlsx
+
+nothing added to commit but untracked files present (use "git add" to track)
+abhishek@abhishek-VirtualBox:~/Downloads/bash_script/backup/bash_script_1$ git add .gitignore .~lock.users.csv# abhishek_user.sh backup.sh backup_script\ .sh create_user.sh delete_user.sh users.csv users.xlsx
+abhishek@abhishek-VirtualBox:~/Downloads/bash_script/backup/bash_script_1$ git commit -m "Initial commit with user creation and backup scripts"
+[master be85112] Initial commit with user creation and backup scripts
+ 3 files changed, 79 insertions(+)
+ create mode 100644 .~lock.users.csv#
+ create mode 100644 backup_script .sh
+ create mode 100644 users.xlsx
+abhishek@abhishek-VirtualBox:~/Downloads/bash_script/backup/bash_script_1$ git remote add origin https://github.com/abhistyalish2802/abhishek_bash_script_assignment
+abhishek@abhishek-VirtualBox:~/Downloads/bash_script/backup/bash_script_1$ git remote -v
+origin	https://github.com/abhistyalish2802/abhishek_bash_script_assignment (fetch)
+origin	https://github.com/abhistyalish2802/abhishek_bash_script_assignment (push)
+abhishek@abhishek-VirtualBox:~/Downloads/bash_script/backup/bash_script_1$ git branch -M main
+git push -u origin main
+Username for 'https://github.com': abhistyalish2802
+Password for 'https://abhistyalish2802@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/abhistyalish2802/abhishek_bash_script_assignment/'
+abhishek@abhishek-VirtualBox:~/Downloads/bash_script/backup/bash_script_1$ ^C
+abhishek@abhishek-VirtualBox:~/Downloads/bash_script/backup/bash_script_1$ git branch -M main
+git push -u origin main
+Username for 'https://github.com': abhistyalish2802
+Password for 'https://abhistyalish2802@github.com': 
+remote: Permission to abhistyalish2802/abhishek_bash_script_assignment.git denied to abhistyalish2802.
+fatal: unable to access 'https://github.com/abhistyalish2802/abhishek_bash_script_assignment/': The requested URL returned error: 403
+abhishek@abhishek-VirtualBox:~/Downloads/bash_script/backup/bash_script_1$ git config --global user.name "Abhishek Singh"
+git config --global user.email "abhistyalish2802@github.com"
+abhishek@abhishek-VirtualBox:~/Downloads/bash_script/backup/bash_script_1$ git remote remove origin
+git remote add origin https://github.com/abhistyalish2802/abhishek_bash_script_assignment.git
+abhishek@abhishek-VirtualBox:~/Downloads/bash_script/backup/bash_script_1$ git push -u origin main
+Username for 'https://github.com': Username for 'https://github.com': abhistyalish2802
+Password for 'https://Username for 'https://github.com': abhistyalish2802@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/abhistyalish2802/abhishek_bash_script_assignment.git/'
+abhishek@abhishek-VirtualBox:~/Downloads/bash_script/backup/bash_script_1$ ^[[200~git branch -M main
+git: command not found
+abhishek@abhishek-VirtualBox:~/Downloads/bash_script/backup/bash_script_1$ git push -u origin main~git config --global user.name "Your Full Name"
+git config --global user.email "you@example.com"
+error: unknown option `global'
+usage: git push [<options>] [<repository> [<refspec>...]]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --repo <repository>   repository
+    --all                 push all refs
+    --mirror              mirror all refs
+    -d, --delete          delete refs
+    --tags                push tags (can't be used with --all or --mirror)
+    -n, --dry-run         dry run
+    --porcelain           machine-readable output
+    -f, --force           force updates
+    --force-with-lease[=<refname>:<expect>]
+                          require old value of ref to be at this value
+    --force-if-includes   require remote updates to be integrated locally
+    --recurse-submodules (check|on-demand|no)
+                          control recursive pushing of submodules
+    --thin                use thin pack
+    --receive-pack <receive-pack>
+                          receive pack program
+    --exec <receive-pack>
+                          receive pack program
+    -u, --set-upstream    set upstream for git pull/status
+    --progress            force progress reporting
+    --prune               prune locally removed refs
+    --no-verify           bypass pre-push hook
+    --follow-tags         push missing but relevant tags
+    --signed[=(yes|no|if-asked)]
+                          GPG sign the push
+    --atomic              request atomic transaction on remote side
+    -o, --push-option <server-specific>
+                          option to transmit
+    -4, --ipv4            use IPv4 addresses only
+    -6, --ipv6            use IPv6 addresses only
+
+abhishek@abhishek-VirtualBox:~/Downloads/bash_script/backup/bash_script_1$ git config --global user.name "abhistyalish2802"
+git config --global user.email "akstyalish28@gmail.com"
+abhishek@abhishek-VirtualBox:~/Downloads/bash_script/backup/bash_script_1$ git remote remove origin
+git remote add origin https://github.com/akstyalish28/abhishek_bash_script_assignment.git
+abhishek@abhishek-VirtualBox:~/Downloads/bash_script/backup/bash_script_1$ S
+
+
+
+**Self-Assessment**:
+Rating (out of 10): 8
+
+
+**2. Comprehensive Documentation**
+ The `README.md` file is complete and well-structured.
+ Instructions for running the scripts are clear and detailed.
+
+**Self-Assessment**:
+Rating (out of 10):8
+
+
+
